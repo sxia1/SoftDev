@@ -1,3 +1,8 @@
+<!--Duckers - Daniel Gelfand and Sophia Xu
+SoftDev1 pd<6>
+K<10> -- Jinja Tuning
+2018-09-24-->
+
 <!DOCTYPE html>
 
 <html>
@@ -7,17 +12,10 @@
 </head>
 
 <body>
-  
+
 <h1> Table with Occupations and Corresponding Percentages </h1>
 
-{% for i in collection %}
-{% if theOne <(10*collection[i] + ctr) %}
-{{i}}
-{% else %}
-{% set ctr = ctr + (10 * collection[i]) %}
-{% endif %}
-{% endfor %}
-
+<h2> {{randJob}} </h2>
 <table border="1">
 
 {% for item in collection %}
