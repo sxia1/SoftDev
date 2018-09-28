@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <head>TEST</head>
+
+  <body>
+    <form actions = "/auth">
+      <input type = "text" name = "username">
+      <input type = "submit" name = "Sub1">
+    </form>
+  </body>
+  
+</html>

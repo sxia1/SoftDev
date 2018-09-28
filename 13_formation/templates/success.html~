@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head> WELCOME, YOU FINALLY MADE IT </head>
+
+  <body>
+    Welcome {{username}}, took you long enough -_-
+  </body>
+  
+</html>
