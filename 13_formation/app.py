@@ -22,7 +22,7 @@ def authenticate():
     print(request.args['username'])
     print(request.headers)
     # return "I like watermelon"
-    return render_template("success.html", username = request.form['username'], sub1 = request.args['sub1'])
+    return render_template("success.html", username = request.args['username'], sub1 = request.method)
     
 if __name__ == "__main__":
     app.debug = True
