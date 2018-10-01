@@ -14,7 +14,8 @@ def home():
     print(app)
     return render_template("auth.html")
 
-@app.route("/auth")
+# default method is GET when POST isn't specified
+@app.route("/auth", methods=["POST"])
 def authenticate():
     print(app)
     print(request)
@@ -22,7 +23,7 @@ def authenticate():
     print(request.args['username'])
     print(request.headers)
     # return "I like watermelon"
-    return render_template("success.html", username = request.args['username'], sub1 = request.method)
+    return render_template("success.html", username = request.cookies.get('username'), sub1 = request.method)
     
 if __name__ == "__main__":
     app.debug = True
