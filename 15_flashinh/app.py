@@ -2,11 +2,11 @@
 JamBuds
 Sophia Xia, Mohammed S. Jamil
 SoftDev1 pd6
-K14 -- Do I Know You?
+K15 -- Oh yes, perhaps I do...
 2018-10-01
 '''
 
-from flask import Flask, render_template, request, session, url_for, redirect
+from flask import Flask,flash, render_template, request, session, url_for, redirect
 import os
 app = Flask(__name__)
 
@@ -19,35 +19,36 @@ pswd = 'swordfish'
 def home():
     # prints <Flask 'app'> 
     print(app)
+    #Checks if the user is logged in
     if 'JAMIIII' in session:
         return render_template('welcome.html', username = 'JAMIIII')
     return render_template('auth.html')
 
 @app.route('/logout')
 def logout():
+    #if the user clicks the button and gets to the route the user is removed from the session
     session.pop('JAMIIII')
     return redirect(url_for('home'))
-
-@app.route('/usrfail')
-def wrongusr():
-    return render_template('auth.html', ERROR = 'SHAME ON YOU, WRONG USERNAME')
-
-@app.route('/pwdfail')
-def wrongpwd():
-    return render_template('auth.html', ERROR = 'SHAME ON YOU, WRONG PASSWORD')
 
 @app.route('/auth', methods=['GET','POST'])
 def authenticate():
     print(request.cookies)
+    
+    #Gets the input via POST
+    usr = request.form['username']
+    passwd = request.form['password']
 
-    usr = request.args['username']
-    passwd = request.args['password']
+    #If the user somehow gets to this route this code will show them the welcome page
+    if 'JAMIIII' in session:
+        return render_template('welcome.html', username = 'JAMIIII')
     
     #redirects user based on unsuccessful login
     if usr != user:
-        return redirect(url_for('wrongusr'))
+        flash("SHAME ON YOU, WRONG USERNAME")#The flash messages are displayed at the top of the login page.
+        return redirect(url_for('home'))
     elif passwd != pswd:
-        return redirect(url_for('wrongpwd'))
+        flash("SHAME ON YOU, WRONG PASSWORD")
+        return redirect(url_for('home'))
 
     #redirects user to home page if successful
     session[usr] = pswd
