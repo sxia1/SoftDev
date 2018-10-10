@@ -9,7 +9,7 @@ import csv       #facilitates CSV I/O
 import os        #for deleting discobandit
 
 
-file = "discobandit";
+file = "discobandit.db";
 
 ## If file exists, delete it ##
 #os.remove(file)
@@ -46,6 +46,7 @@ with open('data/peeps.csv', 'r') as file:
         c.execute(comm_peeps)
 
 #populating table-comm_occupations
+
 with open('data/courses.csv', 'r') as file:
     read = csv.DictReader(file)
     for r in read:
@@ -63,18 +64,11 @@ def get_grade(osis_num):
     return c.execute(comm_grade).fetchall()
 print get_grade(osis_num)
 
-#returns how many grades a student has
-def get_length(osis_num):
-    comm_length = "SELECT count(*) FROM classes WHERE osis ="
-    comm_length += str(osis_num)
-    return c.execute(comm_length).fetchone()[0]
-print get_length(osis_num)
-
 #gets average according to osis number
 def computeAvg(osis_num):
-    length = get_length(osis_num)
-    ctr = length -1
     cur = get_grade(osis_num)
+    length = len(cur)
+    ctr = length -1
     retVal = 0
     while ctr >= 0:
         retVal += int(cur[ctr][0])
@@ -105,7 +99,7 @@ while osis_num < 11:
     osis_num += 1
 
 #display avg table
-comm_display_avg= "SELECT *FROM peeps_avgs"
+comm_display_avg= "SELECT * FROM peeps_avgs"
 display = c.execute(comm_display_avg)
 ctr = 0
 while ctr < 10:
