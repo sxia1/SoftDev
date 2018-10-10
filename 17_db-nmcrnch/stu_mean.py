@@ -11,8 +11,8 @@ import os        #for deleting discobandit
 
 file = "discobandit.db";
 
-## If file exists, delete it ##
-#os.remove(file)
+#opens file in write mode, which turns it into a blank file
+open("discobandit.db",'w').close()
 
 
 DB_FILE = "discobandit.db"
@@ -87,29 +87,29 @@ comm_avg = """
 c.execute(comm_avg)
 
 #Populate avg table
-while osis_num < 11:
+comm_len = "SELECT * FROM mypeeps"
+length = len(c.execute(comm_len).fetchall())
+print length
+while osis_num < length +1:
     comm_getname = "SELECT name FROM mypeeps WHERE mypeeps.id = "
     comm_getname += str(osis_num)
     name = c.execute(comm_getname).fetchone()[0]
     #print name
     avg = computeAvg(osis_num)
     #print avg
-    comm_pop = "INSERT INTO peeps_avgs(name, avg, osis) VALUES(\"" + name + "\", " + str(avg) + ", " + str(osis_num) + ");"
-    c.execute(comm_pop)
+    params = (None, name, avg, osis_num)
+    c.execute("INSERT INTO peeps_avgs VALUES(?,?,?,?)", params)
     osis_num += 1
 
 #display avg table
 comm_display_avg= "SELECT * FROM peeps_avgs"
-display = c.execute(comm_display_avg)
-ctr = 0
-while ctr < 10:
-    print display.fetchone()
-    ctr += 1
+display = c.execute(comm_display_avg).fetchall()
+print display
 
 #add a course to the table classes
 def add_course(nname, nmark, nosis):
-    comm_add_course = "INSERT INTO classes(name, mark, osis) VALUES(\"" + nname + "\", " + str(nmark) + ", " + str(nosis) + ");"
-    c.execute(comm_add_course)
+    columns = (nname, nmark, nosis)
+    c.execute("INSERT INTO classes(name, mark, osis) VALUES(?,?,?)", columns)
 
 add_course("IT", 100, 11)
     
