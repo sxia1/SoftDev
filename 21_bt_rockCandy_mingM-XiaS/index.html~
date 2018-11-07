@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body> 
+ 
+  <div class="container">
+    <div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>
+  <h2>Basic Panel</h2>
+  <div class="panel panel-default">
+    <div class="panel-body">A Basic Panel</div>
+  </div>
+  Sugar plum powder carrot cake. Powder croissant pudding bonbon. Carrot cake jujubes croissant jelly. Jelly donut muffin.
+
+Cake donut muffin cake. Soufflé tart marshmallow powder. Muffin brownie bonbon sesame snaps.
+
+Biscuit biscuit cookie cake jelly beans. Jelly beans macaroon pastry. Cupcake carrot cake powder.
+
+Caramels topping sweet. Fruitcake apple pie fruitcake. Dragée gummies caramels caramels icing. Pastry marshmallow cake apple pie pudding pastry jelly beans soufflé candy.
+
+Sweet roll tart bear claw carrot cake wafer chocolate cake. Marshmallow bonbon sweet roll brownie apple pie. Cheesecake lemon drops lemon drops gummi bears cheesecake bear claw jelly-o.
+</div>
+
+</body>
+</html>
