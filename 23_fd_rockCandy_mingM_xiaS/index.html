@@ -13,54 +13,222 @@
 </head>
 
 <body>
-  <div class = "top-bar">
-    <!--TOP BAR-->
-    <div class = "top-bar-left">
-      <ul class = "menu align-left">
-	<li class = "menu-text">Team ROCK Candy</li>
-	<li><a href = "#home">Home</a></li>
-	<li><a href = "#sweets">Sweets</a></li>
-	<li><a href = "#donate">Donation Page</a></li>
-      </ul>
-    </div>
-    <!--SEARCH-->
-    <div class = "top-bar-right">
-      <ul class = "menu">
-	<li><input type = "search" placeholder = "Search"></li>
-	<li><button type = "button" class = "Search">Search</button></li>
-      </ul>
+  <div class = "grid-x grid-padding-x">
+    <div class = "large-12 cell">
+      <h1>Foundation Features</h1>
+
+      <div class = "top-bar">
+	<!--TOP BAR-->
+	<div class = "top-bar-left">
+	  <ul class = "menu align-left">
+	    <li class = "menu-text">Navbar<li>
+	    <li><a href = "#one">Link One</a></li>
+	    <li><a href = "#two">Link Two</a></li>
+	    <li><a href = "#three">Link Three</a></li>
+	  </ul>
+	</div>
+	<!--SEARCH-->
+	<div class = "top-bar-right">
+	  <ul class = "menu">
+	    <li><input type = "search" placeholder = "Search"></li>
+	    <li><a href = "#" class = "button">Search</a></li>
+	  </ul>
+	</div>
+      </div>
+
+      <!--BREADCRUMBS-->
+      <nav aria-label = "You are here:" role = "navigation">
+	<ul class = "breadcrumbs">
+	  <li class = "disabled">Team ROCK Candy</li>
+	  <li><a href = "#home">Home</a></li>
+	  <li><a href = "#sweets">Sweets</a></li>
+	  <li><a href = "#donate">Donation Page</a></li>
+	  <li><span class = "show-for-sr">Current: </span> Sweets </li>
+	</ul>
+      </nav>
+
+      <!--GRID-->
+      <h2>Grid</h2>
+      <div class = "grid-x grid-padding-x">
+	<div class = "column large-12 cell">
+	  Toffee biscuit danish pastry pastry. Jelly donut chocolate bar chocolate pie chupa chups. Marzipan bonbon tiramisu liquorice marshmallow biscuit croissant. Bear claw pie sweet roll topping marshmallow cupcake croissant icing. Pie chocolate bar cheesecake. Gingerbread chocolate cake soufflé tart tart. Sugar plum chocolate cake icing cookie. Lollipop ice cream tart jelly beans oat cake. Macaroon fruitcake cotton candy sesame snaps marzipan sugar plum. Pudding pie ice cream caramels chupa chups chupa chups tiramisu pastry. Cake bear claw gummi bears marshmallow. Fruitcake jujubes cookie bear claw.</div>
+      </div>
+      <div class = "grid-x grid-padding-x">
+	<div class = "column large-6 medium-9 small-3 cell">
+	  Toffee biscuit danish pastry pastry. Jelly donut chocolate bar chocolate pie chupa chups. Marzipan bonbon tiramisu liquorice marshmallow biscuit croissant. Bear claw pie sweet roll topping marshmallow cupcake croissant icing. Pie chocolate bar cheesecake. Gingerbread chocolate cake soufflé tart tart. Sugar plum chocolate cake icing cookie. Lollipop ice cream tart jelly beans oat cake. Macaroon fruitcake cotton candy sesame snaps marzipan sugar plum. Pudding pie ice cream caramels chupa chups chupa chups tiramisu pastry. Cake bear claw gummi bears marshmallow. Fruitcake jujubes cookie bear claw.</div>
+	<div class = "column large-6 medium-9 small-3 cell">
+	  Ice cream cookie muffin liquorice cookie bonbon jelly pudding icing. Lemon drops topping chocolate bar toffee pudding chocolate bar marshmallow caramels. Wafer tiramisu candy canes chupa chups tart sweet cheesecake lemon drops. Gingerbread lemon drops bear claw pudding candy lemon drops bonbon ice cream. Sesame snaps candy muffin dessert. Powder jujubes dragée caramels brownie sesame snaps bear claw gummi bears. Lemon drops cotton candy biscuit pudding biscuit cookie. Toffee powder pudding macaroon cupcake tart cupcake chupa chups. Caramels jelly-o cupcake pudding chocolate cake sweet oat cake pastry cake. Bonbon sweet roll bear claw apple pie cotton candy carrot cake chocolate cake tiramisu topping. Chocolate cake toffee cake. Carrot cake lemon drops topping biscuit dessert sweet cookie pie muffin. Biscuit marshmallow biscuit halvah pie pudding liquorice marshmallow soufflé.</div>
+      </div>
+      <h2>Buttons</h2>
+      <h4>Coloring</h4>
+      <h5>Options: primary, secondary,  success, alert, warning</h5>
+      <a href = "#" class = "button primary">Primary</a>
+      <a href = "#" class = "button secondary">Secondary</a>
+      <a href = "#" class = "button  success"> success</a>
+      <a href = "#" class = "button alert">Alert</a>
+      <a href = "#" class = "button warning">Warning</a>
+      <h4>Sizing</h4>
+      <a href = "#" class = "button tiny">Tiny</a>
+      <a href = "#" class = "button small">Small</a>
+      <a href = "#" class = "button original">Original</a>
+      <a href = "#" class = "button large">Large</a>
+      <a href = "#" class = "button expanded">Expanded</a>
+      <h4>Other</h4>
+      <a href = "#" class = "button hollow">Hollow</a>
+      <a href = "#" class = "button clear">Clear</a>
+      <a href = "#" class = "button disabled">Disabled</a>
+
+      <div class = "container">
+	<h2>Callouts</h2>
+	<!--CALLOUT-->
+	<div class="callout secondary">
+	  <h5>This is a secondary callout</h5>
+	  <p>It has an easy to override visual style, and is appropriately subdued.</p>
+	  <a href="#">It's dangerous to go alone, take this.</a>
+	</div>
+	<div class="callout primary">
+	  <h5>This is a primary callout</h5>
+	  <p>It has an easy to override visual style, and is appropriately subdued.</p>
+	  <a href="#">It's dangerous to go alone, take this.</a>
+	</div>
+	<div class="callout success">
+	  <h5>This is a success callout</h5>
+	  <p>It has an easy to override visual style, and is appropriately subdued.</p>
+	  <a href="#">It's dangerous to go alone, take this.</a>
+	</div>
+	<div class="callout warning">
+	  <h5>This is a warning callout</h5>
+	  <p>It has an easy to override visual style, and is appropriately subdued.</p>
+	  <a href="#">It's dangerous to go alone, take this.</a>
+	</div>
+	<div class="callout alert">
+	  <h5>This is a alert callout</h5>
+	  <p>It has an easy to override visual style, and is appropriately subdued.</p>
+	  <a href="#">It's dangerous to go alone, take this.</a>
+	</div>
+	<div class="callout small">
+	  <h5>This is a small callout</h5>
+	  <p>It has an easy to override visual style, and is appropriately subdued.</p>
+	  <a href="#">It's dangerous to go alone, take this.</a>
+	</div>
+	<div class="callout large">
+	  <h5>This is a large callout</h5>
+	  <p>It has an easy to override visual style, and is appropriately subdued.</p>
+	  <a href="#">It's dangerous to go alone, take this.</a>
+	</div>
+
+	<!--LABEL-->
+	<h2>Labels</h2>
+	<span class="label primary">Primary Label</span>
+	<span class="label secondary">Secondary Label</span>
+	<span class="label success">Success Label</span>
+	<span class="label alert">Alert Label</span>
+	<span class="label warning">Warning Label</span>
+	<br>
+	<!--SWITCH-->
+	<h2>Switches</h2>
+	Do you like sweets?<span class="badge">Sweets</span>
+	<div class="switch">
+	  <input class="switch-input" id="exampleRadioSwitch1" type="checkbox" checked name="testGroup">
+	  <label class="switch-paddle" for="exampleRadioSwitch1">
+	    <span class="show-for-sr">Sweets</span>
+	    <span class="switch-active" aria-hidden="true">Yes</span>
+	    <span class="switch-inactive" aria-hidden="true">No</span>
+	</div>
+	</label>
+      </div>
+      <!--TABLE-->
+      <h2>Tables</h2>
+      <table>
+	<thead>
+	  <tr>
+	    <th width="200">Candy</th>
+	    <th>Candy</th>
+	    <th width="150">Candy</th>
+	    <th width="150">Candy</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <td>Chocolate</td>
+	    <td>Candies are sweet!</td>
+	    <td>Chocolate</td>
+	    <td>Chocolate</td>
+	  </tr>
+	  <tr>
+	    <td>Chocolate</td>
+	    <td>Candies are sweet!</td>
+	    <td>Chocolate</td>
+	    <td>Chocolate</td>
+	  </tr>
+	  <tr>
+	    <td>Chocolate</td>
+	    <td>Candies are sweet!</td>
+	    <td>Chocolate</td>
+	    <td>Chocolate</td>
+	  </tr>
+	</tbody>
+      </table>
+      <!--PROGRESS-->
+      <h2>Progress</h2>
+      <div class="progress" role="progressbar" tabindex="0" aria-valuenow="25" aria-valuemin="0" aria-valuetext="25 percent" aria-valuemax="100">
+	<span class="progress-meter" style="width: 25%">
+	  <p class="progress-meter-text">25%</p>
+	</span>
+      </div>
+      <!--CARD-->
+      <h2>Cards</h2>
+      <div class="grid-container">
+	<div class="grid-x grid-padding-x small-up-2 medium-up-3">
+	  <div class="cell">
+	    <div class="card">
+              <img src="http://www.afooda.com/wp-content/uploads/2016/12/hard-candy-pieces-up-close.jpg">
+              <div class="card-section">
+		<h4>Some cool candy</h4>
+		<p>Candy.</p>
+              </div>
+	    </div>
+	  </div>
+	  <div class="cell">
+	    <div class="card">
+	      <img src="http://www.afooda.com/wp-content/uploads/2016/12/hard-candy-pieces-up-close.jpg">
+	      <div class="card-section">
+		<h4>Some cool candy</h4>
+		<p>Candy.</p>
+	      </div>
+	    </div>
+	  </div>	
+	  <div class="cell">
+	    <div class="card">
+	      <img src="http://www.afooda.com/wp-content/uploads/2016/12/hard-candy-pieces-up-close.jpg">
+	      <div class="card-section">
+		<h4>Some cool candy</h4>
+		<p>Candy.</p>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+      </div>
+
+
+      <!--PAGINATION-->
+      <h2>Pagination</h2>
+      <nav aria-label="Pagination">
+	<ul class="pagination">
+	  <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
+	  <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+	  <li><a href="#" aria-label="Page 2">2</a></li>
+	  <li><a href="#" aria-label="Page 3">3</a></li>
+	  <li><a href="#" aria-label="Page 4">4</a></li>
+	  <li class="ellipsis" aria-hidden="true"></li>
+	  <li><a href="#" aria-label="Page 12">12</a></li>
+	  <li><a href="#" aria-label="Page 13">13</a></li>
+	  <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
+	</ul>
+      </nav>
     </div>
   </div>
-  
-  <div class = "container">
-    <!--BREADCRUMBS-->
-    <nav aria-label = "You are here:" role = "navigation">
-      <ul class = "breadcrumbs">
-	<li class = "disabled">Team ROCK Candy</li>
-	<li><a href = "#home">Home</a></li>
-	<li><a href = "#sweets">Sweets</a></li>
-	<li><a href = "#donate">Donation Page</a></li>
-	<li><span class = "show-for-sr">Current: </span> Sweets </li>
-      </ul>
-    </nav>
-  </div>
 
-
-
-  <!--PAGINATION-->
-  <nav aria-label="Pagination">
-  <ul class="pagination">
-    <li class="pagination-previous disabled">Previous <span class="show-for-sr">page</span></li>
-    <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
-    <li><a href="#" aria-label="Page 2">2</a></li>
-    <li><a href="#" aria-label="Page 3">3</a></li>
-    <li><a href="#" aria-label="Page 4">4</a></li>
-    <li class="ellipsis" aria-hidden="true"></li>
-    <li><a href="#" aria-label="Page 12">12</a></li>
-    <li><a href="#" aria-label="Page 13">13</a></li>
-    <li class="pagination-next"><a href="#" aria-label="Next page">Next <span class="show-for-sr">page</span></a></li>
-  </ul>
-</nav>
 </body>
 
 </html>
