@@ -7,8 +7,14 @@
 <body>
   <p>New adventures in RESTful APIs:</p>
   {% for each in INFO %}
-  {{each}}
+  {% if 'url' == each %}
+  <img src = {{ INFO[each] }}>
+  {% endif %}
+  {% if 'explanation' == each %}
+  {{ INFO[each] }}
+  {% endif %}
   {% endfor %}
+  
 </body>
 
 </html>
