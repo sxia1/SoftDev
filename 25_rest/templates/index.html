@@ -1,0 +1,33 @@
+<!--
+    Sophia Xia
+    SoftDev1 pd6
+    K25 -- Getting More REST
+    2018-11-14
+  -->
+
+<!DOCTYPE html>
+
+<head>
+  <title>NYC OPEN DATA API DEMO</title>
+</head>
+
+<body>
+  <p>New adventures in RESTful APIs:</p>
+  <h1>Water Consumption in NYC</h1>
+  {% for each in INFO[0].keys() %}
+  {{ each }} &emsp;
+  {% endfor %}
+  <br>
+  {% for eachdict in INFO %}
+  {% for each in eachdict %}
+  {{ eachdict[each] }}
+  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+  &emsp; &emsp; &emsp; &emsp; &emsp; &emsp;
+  {% endfor %}
+  <br>
+  {% endfor %}
+  <div><iframe width="500px" title="2015 Street Tree Census - Tree Data" height="425px" src="https://data.cityofnewyork.us/w/pi5s-9p35/25te-f2tw?cur=3VqZeSEiOSP&from=root" frameborder="0"scrolling="no"><a href="https://data.cityofnewyork.us/Environment/2015-Street-Tree-Census-Tree-Data/pi5s-9p35" title="2015 Street Tree Census - Tree Data" target="_blank">2015 Street Tree Census - Tree Data</a></iframe><p><a href="http://www.socrata.com/" target="_blank">Powered by Socrata</a></p></div>
+    
+</body>
+
+</html>

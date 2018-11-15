@@ -1,8 +1,8 @@
 '''
 Sophia Xia
 SoftDev1 pd6
-K24 -- A RESTful Journey Skyward
-2018-11-13
+K25 -- Getting More REST
+2018-11-14
 '''
 
 from flask import Flask, render_template
@@ -11,11 +11,12 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    url = "https://api.nasa.gov/planetary/apod?api_key=zIOpt7HlAwHA2rs8CiUZvnRSUeA32xoMGsWMewtA"
+    url = "https://data.cityofnewyork.us/resource/waf7-5gvc.json"
     req = urllib.request.urlopen(url)
     data = req.read()
-    encoding = req.info().get_content_charset('utf-8')
-    dict = json.loads(data.decode(encoding))
+    dict = json.loads(data)
+    for each in dict:
+        print(each.values())
     return render_template('index.html', INFO = dict)
 
 if __name__ == "__main__":
