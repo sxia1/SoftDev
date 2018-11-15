@@ -13,9 +13,18 @@ from urllib import request
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/cat_facts")
 def hello_world:
-    return render_template('temp.html')
+    return render_template('catFacts.html')
+
+@app.route("/studio_ghibli")
+def hello_world:
+    return render_template('studioGhibli.html')
+
+@app.route("/sunset_rise")
+def hello_world:
+    return render_template('sunsetRise.html')
+
 
 if __name__ == "__main__":
     app.debug = True
