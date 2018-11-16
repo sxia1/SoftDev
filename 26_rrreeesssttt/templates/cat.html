@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <head>
+    <title>CATS</title>
+  </head>
+
+  <body>
+
+    <h1>Cat Breeds</h1>
+    {% for each in BINFO %}
+    <pre>
+    {% for info in each %}
+    {{info}}: {{each[info]}}
+    {% endfor %}
+    </pre>
+    {% endfor %}
+    <br><br>
+    
+    <h1>Random Fact</h1>
+    {{ FINFO['fact'] }}
+    <br><br>
+
+    <h1>Random Facts</h1>
+    {% for each in FSINFO %}
+    <pre>
+    {{each['fact']}}
+    </pre>
+    {% endfor %}
+    <br><br>
+    
+  </body>
+  
+</html>

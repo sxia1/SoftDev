@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html>
+  
+  <head>
+    <title>Studio Ghibli</title>
+  </head>
+
+  <body>
+    <h1>Studio Ghibli Films</h1>
+    {% for each in FILMS %}
+    {{each['title']}}
+    <br>
+    <p> {{each['description']}} </p>
+    <br><br>
+    {% endfor %}
+  </body>
+  
+</html>
